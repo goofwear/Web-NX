@@ -1,8 +1,6 @@
 #pragma once
 
 #include <switch.h>
-
-bool appletinit = false;
+#include <stdlib.h>
 
 char *keyboard(char *message, size_t size);
-void userAppInit(void)
