@@ -1,3 +1,3 @@
 #include <switch.h>
 
-static void launchWeb(char *url);
+static void launchWeb(const char *url);

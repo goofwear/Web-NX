@@ -1,6 +1,8 @@
 #include <nx_keyboard.h>
 #include <web/web.h>
 
+#include <stdio.h>
+
 int main(int argc, char const *argv[])
 {
     printf("Asking for the user's URL.....");

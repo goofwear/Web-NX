@@ -1,4 +1,5 @@
 .vscode/
+build/
 *.nro
 *.nacp
 *.o
