@@ -47,7 +47,7 @@ INCLUDES	:=	include
 APP_TITLE	:=	Web-NX
 APP_AUTHOR	:=	CosmoXD
 APP_VERSION	:=	1.0.0
-APP_ICON	:=	icon.png
+APP_ICON	:=	icon.jpg
 
 #---------------------------------------------------------------------------------
 # options for code generation
