@@ -2,6 +2,12 @@
 
 char *keyboard(char *message, size_t size)
 {
+    if(!appletinit)
+    {
+        userAppInit();
+        appletinit = true;
+    }
+
     SwkbdConfig skp;
     Result keyrc = swkbdCreate(&skp, 0);
 
@@ -22,4 +28,10 @@ char *keyboard(char *message, size_t size)
     }
 
     return (output);
+}
+
+void userAppInit(void)
+{
+	void *addr = NULL;
+	if (svcSetHeapSize(&addr, 0x4000000) == (Result)-1) fatalSimple(0);
 }
