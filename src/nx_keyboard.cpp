@@ -1,4 +1,4 @@
-#include <nx_keyboard.h>
+#include <nx_keyboard.hpp>
 
 bool appletinit = false;
 
@@ -32,8 +32,11 @@ char *keyboard(char *message, size_t size)
     return (output);
 }
 
-void userAppInit(void)
+extern "C"
 {
-	void *addr = NULL;
-	if (svcSetHeapSize(&addr, 0x4000000) == (Result)-1) fatalSimple(0);
+    void userAppInit(void)
+    {
+	    void *addr = NULL;
+	    if (svcSetHeapSize(&addr, 0x4000000) == (Result)-1) fatalSimple(0);
+    }
 }
