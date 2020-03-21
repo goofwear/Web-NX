@@ -1,5 +1,5 @@
 #include <nx_keyboard.h>
-#include <web/web.h>
+#include <web/web.hpp>
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,7 +11,7 @@ int main(int argc, char const *argv[])
 
     printf("Asking for the user's URL.....");
     char *url = keyboard("Write your url here. Please include the \"https://\"", sizeof(url));
-    launchWeb(url);
+    launchWeb(url.AsUTF8());
 
     while (appletMainLoop())
     {
