@@ -10,8 +10,8 @@ int main(int argc, char const *argv[])
     consoleInit(NULL);
 
     printf("Asking for the user's URL.....");
-    char *url = keyboard("Write your url here. Please include the \"https://\"", sizeof(url));
-    launchWeb(url.AsUTF8());
+    char *url = keyboard("Write your url here. Please include the \"https://\"", (size_t)0);
+    launchWeb(url);
 
     while (appletMainLoop())
     {
@@ -24,7 +24,6 @@ int main(int argc, char const *argv[])
         consoleUpdate(NULL);
     }
 
-    free(url);
     consoleExit(NULL);
     return 0;
 }
