@@ -1,8 +1,7 @@
 #include <switch.h>
+#include <string.h>
 
-#include <string>
-
-void launchWeb(std::string url)
+void launchWeb(char *url)
 {
     WebCommonConfig web;
     webPageCreate(&web, url.c_str());
